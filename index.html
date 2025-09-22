@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Research Report Aggregator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'morandi-bg': '#F5F5F3', // Soft, off-white background
+            'morandi-surface': '#FFFFFF', // For cards and surfaces
+            'morandi-text-primary': '#4B4B4B', // Dark grey for primary text
+            'morandi-text-secondary': '#7E7E7E', // Lighter grey for secondary text
+            'morandi-accent': '#6082B6', // Dusty, muted blue for accents
+            'morandi-accent-hover': '#506D9A', // Darker accent for hover
+            'morandi-border': '#E0E0E0', // Soft border color
+            'morandi-stop': '#C97171', // Muted red for stop button
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0, transform: 'translateY(10px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+          },
+        }
+      }
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0"
+  }
+}
+</script>
+</head>
+<body class="bg-morandi-bg text-morandi-text-primary">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
